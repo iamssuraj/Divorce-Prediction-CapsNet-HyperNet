@@ -1,0 +1,114 @@
+RowId,Gender,Age_Gap,Graduation_Status,Current_occupation,Spouse_Occupation_Field,Spouse_Graduation_Status,Occupation_Status,Spouse_Occupation_Status,Social_Status_preference,Marriage_Preference,Financial_Independence,Spouse_Financial_Independence,Mental_Health_Status,Spouse_Mental_Health_Preference,Consent_for_Children,Height_Difference( In Inches),Approx_Income (In Lakhs),Spouse_Income_Preference( In Lakhs),Relation_with_InLaws,Pre_Marital_Relation_Status,Spouse_Pre_Marital_Relation_Status,Time_Together_Before_Marriage,Output
+1,Female,5,Yes,Engineer,Engineer,Yes,No,Yes,1,1,Yes,Yes,6,6,Yes,6,1,2,6,Yes,Yes,0 - 1,Success
+2,Female,-1,Yes,Engineer,Engineer,Yes,Yes,Yes,3,6,Yes,Yes,5,5,Yes,5,8,8,4,Yes,Yes,6 - 10,Success
+3,Female,-2,Yes,Engineer,Business Owner,Yes,Yes,Yes,6,4,Yes,Yes,5,4,Yes,3,12,9,3,No,Yes,2 - 4,Success
+4,Male,2,Yes,Engineer,Engineer,Yes,No,Yes,6,3,No,Yes,5,4,Yes,3,0,99,5,No,No,0 - 1,Success
+5,Male,0,Yes,Engineer,Teacher/Professor/Lecturer,Yes,No,Yes,6,4,No,Yes,2,5,Yes,5,5,5,5,No,No,2 - 4,Success
+6,Male,2,No,Engineer,Doctor,Yes,No,Yes,6,6,No,Yes,6,5,Yes,5,5,10,6,No,Yes,2 - 4,Success
+7,Male,0,No,Engineer,Engineer,Yes,No,Yes,3,4,No,Yes,5,4,Yes,5,0,10,5,Yes,Yes,0 - 1,Success
+8,Female,+2 ,No,Other,Doctor,Yes,No,Yes,5,3,No,Yes,5,5,Yes,+3,0,24,5,No,No,0 - 1,Success
+9,Male,+5,Yes,Engineer,Engineer,Yes,No,Yes,3,6,No,Yes,4,6,Yes,1,0,12,6,No,Yes,2 - 4,Success
+10,Male,3,Yes,Other,Other,Yes,Yes,Yes,4,5,Yes,Yes,6,6,Yes,4,20,15,4,Yes,No,0 - 1,Success
+11,Male,-5,Yes,Other,Doctor,No,No,Yes,1,6,No,Yes,1,1,Yes,10,0,5,6,No,Yes,2 - 4,Success
+12,Female,3,No,Engineer,Other,Yes,No,Yes,3,6,No,Yes,6,3,Yes,2,0,2,6,Yes,Yes,2 - 4,Success
+13,Male,-1,Yes,Engineer,Other,Yes,No,Yes,3,4,No,No,5,4,Yes,5,10,3,6,No,Yes,6 - 10,Success
+14,Male,-1,No,Other,Business Owner,Yes,Yes,Yes,2,6,Yes,Yes,3,3,Yes,2,5,7,2,Yes,Yes,6 - 10,Success
+15,Male,4,Yes,Other,Other,Yes,No,Yes,6,6,No,No,4,6,Yes,10,50,1,6,No,No,0 - 1,Success
+16,Female,0,Yes,Engineer,Engineer,Yes,No,Yes,5,6,Yes,Yes,4,5,Yes,2,30,30,6,Yes,Yes,2 - 4,Success
+17,Female,1,Yes,Engineer,I don't want my spouse to work,Yes,No,Yes,6,2,No,Yes,4,5,Yes,4,0,10,6,No,No,10+,Success
+18,Male,2,No,Engineer,Engineer,Yes,No,Yes,5,5,No,Yes,1,4,Yes,6,69,69,4,No,No,2 - 4,Success
+19,Male,2,Yes,Engineer,Doctor,Yes,Yes,Yes,3,3,Yes,Yes,5,3,Yes,5,8,6,4,No,No,10+,Success
+20,Female,-3,No,Engineer,Actor,No,Yes,Yes,3,3,Yes,Yes,6,6,Yes,5,22,42,4,Yes,Yes,0 - 1,Success
+21,Female,1,Yes,Other,Other,Yes,Yes,Yes,6,1,Yes,Yes,5,6,Yes,10,1,2,2,No,No,2 - 4,Success
+22,Female,-1,Yes,Engineer,Doctor,Yes,No,Yes,6,5,No,Yes,4,3,Yes,3,0,1,4,No,No,0 - 1,Success
+23,Male,1,No,Engineer,Advocate/Lawyer,Yes,No,Yes,6,6,No,Yes,6,6,Yes,6,0,24,4,Yes,Yes,2 - 4,Success
+24,Female,-1,No,Engineer,Engineer,Yes,No,Yes,5,5,No,Yes,4,4,Yes,6,49,49,5,No,No,6 - 10,Success
+25,Female,1,Yes,Engineer,Teacher/Professor/Lecturer,Yes,Yes,Yes,6,6,No,Yes,3,5,No,7,36,20,2,Yes,Yes,2 - 4,Success
+26,Male,5,Yes,Engineer,I don't want my spouse to work,Yes,Yes,No,6,3,Yes,No,6,4,No,10,5,4,3,No,No,0 - 1,Success
+27,Female,2,Yes,Engineer,Engineer,Yes,Yes,Yes,4,3,Yes,Yes,4,3,Yes,6,7,10,3,No,No,0 - 1,Success
+28,Female,3,No,Business Owner,Business Owner,Yes,No,Yes,4,6,No,Yes,4,4,Yes,10,70,80,5,No,No,2 - 4,Success
+29,Female,2,No,Engineer,Other,Yes,No,Yes,6,3,No,Yes,2,6,Yes,3,0,30,5,No,No,2 - 4,Success
+30,Female,-3,No,Engineer,Engineer,Yes,No,Yes,4,3,No,Yes,4,4,Yes,3,1,1,4,No,No,0 - 1,Success
+31,Male,-1,No,Other,Other,Yes,No,Yes,6,6,No,Yes,1,6,Yes,5,0,5,1,No,No,2 - 4,Success
+32,Female,4,No,Engineer,Business Owner,Yes,Yes,Yes,4,1,No,No,4,4,Yes,2,30,100,4,No,No,10+,Success
+33,Male,2,No,Engineer,Engineer,Yes,No,Yes,3,3,No,Yes,3,5,Yes,5,50,20,5,No,Yes,2 - 4,Success
+34,Male,-1,Yes,Engineer,Engineer,Yes,No,Yes,1,6,No,Yes,6,6,Yes,6,12,18,5,No,No,6 - 10,Success
+35,Female,0,No,Engineer,Other,Yes,No,Yes,1,5,No,Yes,1,6,Yes,3,0,30,4,No,No,2 - 4,Success
+36,Male,3,No,Engineer,Engineer,Yes,Yes,Yes,6,5,Yes,Yes,6,4,Yes,8,20,20,4,Yes,Yes,2 - 4,Success
+37,Male,3,No,Engineer,Business Owner,Yes,No,Yes,3,3,No,Yes,3,2,Yes,10,0,1,2,No,No,0 - 1,Success
+38,Female,2,Yes,Other,Engineer,Yes,Yes,Yes,6,6,Yes,Yes,4,6,Yes,9,7,10,6,No,Yes,6 - 10,Success
+39,Female,-2,Yes,Engineer,Business Owner,Yes,Yes,Yes,4,4,No,Yes,4,6,Yes,8,0,24,6,No,Yes,2 - 4,Success
+40,Female,2,Yes,Engineer,Business Owner,Yes,Yes,Yes,3,5,Yes,Yes,5,3,Yes,10,20,20,6,No,Yes,2 - 4,Success
+41,Male,3,No,Engineer,Actor,Yes,Yes,Yes,4,4,Yes,Yes,6,6,Yes,6,20,20,5,No,No,2 - 4,Success
+42,Male,2,Yes,Engineer,Engineer,Yes,No,Yes,3,3,Yes,Yes,6,4,Yes,1,8,8,5,No,No,2 - 4,Success
+43,Male,2,No,Engineer,Engineer,Yes,Yes,Yes,3,6,Yes,No,3,4,Yes,2,20,10,6,Yes,No,0 - 1,Success
+44,Female,2,No,Doctor,Engineer,Yes,Yes,Yes,3,3,No,Yes,5,6,Yes,7,0,15,5,No,No,2 - 4,Success
+45,Female,-2,Yes,Other,Engineer,Yes,No,Yes,4,6,Yes,Yes,3,4,Yes,+6,0,60,3,Yes,Yes,2 - 4,Success
+46,Female,5,No,Other,Other,Yes,No,Yes,3,5,Yes,Yes,2,4,Yes,5,2,2,4,No,No,2 - 4,Success
+47,Male,-1,Yes,Engineer,Business Owner,Yes,No,Yes,4,5,Yes,Yes,5,5,Yes,5,40,50,6,No,No,2 - 4,Success
+48,Male,1,Yes,Engineer,Doctor,Yes,No,Yes,1,6,Yes,Yes,3,2,Yes,1,1,1,5,Yes,No,2 - 4,Success
+49,Male,5,Yes,Engineer,Doctor,Yes,Yes,Yes,6,6,Yes,Yes,5,3,Yes,4,20,20,5,No,Yes,0 - 1,Success
+50,Female,4,Yes,Engineer,Business Owner,Yes,Yes,Yes,6,1,Yes,Yes,4,6,Yes,5,45,50,6,No,No,0 - 1,Success
+51,Female,-5,No,Engineer,Engineer,Yes,Yes,Yes,6,2,Yes,Yes,6,6,Yes,9,40,60,3,No,No,0 - 1,Success
+52,Female,-2,No,Engineer,Engineer,Yes,No,Yes,5,5,Yes,Yes,5,5,Yes,6,100,100,5,Yes,Yes,2 - 4,Success
+53,Female,3,Yes,Engineer,Engineer,Yes,Yes,Yes,3,6,Yes,Yes,6,6,Yes,5,80,100,1,No,No,0 - 1,Success
+54,Male,4,Yes,Engineer,Doctor,Yes,Yes,Yes,4,3,Yes,Yes,6,6,Yes,5,6,6,6,No,No,0 - 1,Success
+55,Female,-1,Yes,Engineer,Other,Yes,Yes,Yes,4,4,Yes,Yes,5,5,Yes,6,9,9,6,No,No,6 - 10,Success
+56,Male,5,Yes,Engineer,Engineer,Yes,Yes,Yes,3,1,Yes,Yes,1,6,Yes,10,4,4,6,Yes,Yes,0 - 1,Success
+57,Female,2,No,Engineer,Business Owner,Yes,No,Yes,6,6,Yes,Yes,6,4,Yes,10,0,100,6,No,No,0 - 1,Success
+58,Male,0,Yes,Engineer,Engineer,Yes,Yes,Yes,6,3,Yes,Yes,5,5,Yes,6,11,11,5,Yes,Yes,2 - 4,Success
+59,Female,-4,Yes,Engineer,Actor,Yes,No,Yes,5,3,Yes,No,6,6,No,6,0,100,2,No,No,0 - 1,Success
+60,Male,0,Yes,Engineer,Business Owner,Yes,Yes,Yes,5,4,Yes,Yes,3,5,Yes,2,7,7,3,No,Yes,2 - 4,Success
+61,Female,3,Yes,Teacher/Professor/Lecturer,Advocate/Lawyer,Yes,Yes,Yes,6,1,Yes,Yes,5,5,Yes,5.7,6,15,4,No,No,0 - 1,Success
+62,Male,3,Yes,Teacher/Professor/Lecturer,Teacher/Professor/Lecturer,Yes,Yes,Yes,5,1,Yes,Yes,6,1,Yes,10,8,6,4,No,No,0 - 1,Success
+63,Male,1,Yes,Engineer,Other,Yes,Yes,Yes,5,4,Yes,Yes,6,6,Yes,3,9,7,4,No,No,0 - 1,Success
+64,Female,-3,Yes,Engineer,Teacher/Professor/Lecturer,Yes,No,Yes,5,4,Yes,Yes,4,4,Yes,-10,20,70,5,No,Yes,0 - 1,Success
+65,Male,3,Yes,Engineer,Advocate/Lawyer,Yes,Yes,Yes,4,6,Yes,Yes,5,5,Yes,2,7,7,3,No,No,6 - 10,Success
+66,Female,10,Yes,Engineer,Other,No,Yes,No,4,6,Yes,No,6,3,Yes,3,24,1,4,No,Yes,2 - 4,Success
+67,Male,3,Yes,Engineer,Advocate/Lawyer,Yes,Yes,Yes,4,6,Yes,Yes,5,5,Yes,2,7,7,3,No,No,6 - 10,Success
+68,Male,2,Yes,Engineer,Engineer,Yes,Yes,Yes,4,5,Yes,Yes,6,6,Yes,3,12,10,6,No,Yes,0 - 1,Success
+69,Male,2,Yes,Engineer,Teacher/Professor/Lecturer,Yes,Yes,Yes,1,4,Yes,No,4,4,No,5,9,5,2,No,No,2 - 4,Success
+70,Male,2,Yes,Engineer,Advocate/Lawyer,Yes,Yes,Yes,4,4,Yes,Yes,4,6,Yes,5,3,3,6,No,No,0 - 1,Success
+71,Male,2,Yes,Engineer,Other,Yes,Yes,Yes,4,2,Yes,No,5,4,Yes,6,12,1,5,No,No,0 - 1,Success
+72,Male,2,Yes,Other,Business Owner,Yes,Yes,Yes,5,1,Yes,Yes,4,5,Yes,6,20,18,4,No,No,0 - 1,Success
+73,Male,2,Yes,Engineer,Engineer,Yes,Yes,Yes,4,3,Yes,Yes,4,3,Yes,2,10,3,5,No,No,0 - 1,Success
+74,Male,-10,Yes,Engineer,Police,Yes,Yes,Yes,1,6,Yes,Yes,1,1,Yes,9,75,195,1,Yes,Yes,10+,Success
+75,Male,4,Yes,Engineer,Engineer,Yes,Yes,Yes,5,5,Yes,Yes,6,6,Yes,3,100,100,6,Yes,No,2 - 4,Success
+76,Male,4,Yes,Engineer,Business Owner,Yes,Yes,Yes,5,5,Yes,Yes,5,5,Yes,3,10,10,5,No,No,0 - 1,Success
+77,Male,3,Yes,Engineer,Engineer,No,Yes,Yes,3,5,Yes,Yes,6,5,Yes,4,100000,10000,5,No,Yes,2 - 4,Success
+78,Female,3,Yes,Engineer,Engineer,Yes,Yes,Yes,4,5,Yes,Yes,3,5,Yes,5,10,10,4,No,Yes,0 - 1,Success
+79,Female,2,Yes,Other,Engineer,Yes,Yes,Yes,6,3,Yes,Yes,6,6,Yes,7,0,10,6,Yes,No,2 - 4,Success
+80,Male,4,Yes,Business Owner,Other,Yes,Yes,No,6,6,No,Yes,1,3,No,2,6,12,1,Yes,Yes,0 - 1,Divorce
+81,Female,-1,Yes,Advocate/Lawyer,Engineer,Yes,Yes,Yes,5,2,Yes,Yes,6,1,No,4,7,8,3,No,Yes,2 - 4,Divorce
+82,Female,-6,Yes,Other,Engineer,Yes,No,Yes,6,1,No,Yes,2,5,No,5,0,10,2,Yes,Yes,0 - 1,Divorce
+83,Male,-1,Yes,Actor,Actor,Yes,Yes,Yes,1,6,Yes,Yes,2,5,No,6,20,60,6,No,Yes,10+,Divorce
+84,Female,0,Yes,Engineer,Engineer,Yes,Yes,Yes,3,6,No,No,3,3,Yes,3,8,6,1,Yes,Yes,6 - 10,Divorce
+85,Male,10,No,Other,Other,No,Yes,Yes,4,6,Yes,Yes,6,1,Yes,6,400,200,2,No,Yes,2 - 4,Divorce
+86,Male,-5,Yes,Business Owner,Actor,Yes,Yes,Yes,2,2,Yes,Yes,5,5,Yes,1,10000,5000,3,Yes,Yes,2 - 4,Divorce
+87,Male,-5,No,Other,Other,Yes,Yes,Yes,1,6,Yes,Yes,6,6,No,5,1000,50,2,No,Yes,2 - 4,Divorce
+88,Female,1,Yes,Teacher/Professor/Lecturer,Other,No,Yes,Yes,6,1,No,Yes,4,6,No,2,12,400,5,No,No,0 - 1,Divorce
+89,Male,5,Yes,Other,I don't want my spouse to work,No,Yes,No,5,1,Yes,No,4,2,Yes,8,0.5,0,3,No,Yes,0 - 1,Divorce
+90,Male,3,Yes,Police,Engineer,Yes,Yes,Yes,6,6,Yes,Yes,2,5,No,5,6,7,1,No,Yes,0 - 1,Divorce
+91,Female,1,No,Other,Business Owner,Yes,Yes,Yes,1,1,No,Yes,3,5,Yes,3,0,9,2,No,Yes,0 - 1,Divorce
+92,Male,10,Yes,Other,Other,Yes,No,Yes,1,1,Yes,Yes,4,1,No,4,8,12,5,No,Yes,0 - 1,Divorce
+93,Female,-5,No,Other,Business Owner,Yes,Yes,Yes,2,6,No,No,2,1,Yes,3,0,6,1,No,Yes,2 - 4,Divorce
+94,Male,1,Yes,Business Owner,Engineer,Yes,Yes,Yes,3,6,Yes,Yes,5,2,No,3,10,10,1,Yes,No,0 - 1,Divorce
+95,Female,-3,Yes,Other,Engineer,Yes,No,Yes,6,1,No,Yes,5,3,No,2,0,12,2,No,Yes,0 - 1,Divorce
+96,Male,5,Yes,Engineer,Other,Yes,Yes,No,4,1,Yes,No,6,6,No,5,7,0,5,Yes,No,0 - 1,Divorce
+97,Female,-2,Yes,Other,Business Owner,Yes,Yes,Yes,6,1,Yes,Yes,3,3,No,12,150,70,2,Yes,No,2 - 4,Divorce
+98,Female,-2,No,Other,Business Owner,Yes,Yes,No,1,6,Yes,Yes,1,1,No,4,80,50,5,Yes,Yes,10+,Divorce
+99,Female,1,Yes,Doctor,Other,Yes,Yes,Yes,3,6,Yes,Yes,5,5,No,1,60,20,3,Yes,Yes,6 - 10,Divorce
+100,Male,2,Yes,Other,Actor,Yes,Yes,Yes,6,1,Yes,Yes,5,6,No,16,20,100,1,No,Yes,0 - 1,Divorce
+101,Female,-6,Yes,Teacher/Professor/Lecturer,Other,Yes,Yes,Yes,3,1,Yes,Yes,2,3,Yes,4,12,16,3,No,No,0 - 1 ,Divorce
+102,Male,0,Yes,Teacher/Professor/Lecturer,Other,No,Yes,Yes,1,6,Yes,No,5,5,Yes,2,18,1.2,1,Yes,Yes,2 - 4,Divorce
+103,Male,1,Yes,Engineer,Engineer,Yes,Yes,Yes,2,6,Yes,No,1,3,No,3,8.4,12,1,No,No,2 - 4,Divorce
+104,Male,5,No,Other,Doctor,Yes,Yes,Yes,3,1,Yes,Yes,4,6,No,6,5,7,5,No,No,0 - 1,Divorce
+105,Female,-2,Yes,Teacher/Professor/Lecturer,Business Owner,Yes,Yes,Yes,6,1,Yes,Yes,6,6,Yes,1,3.6,12,3,No,No,0 - 1,Divorce
+106,Male,3,Yes,Teacher/Professor/Lecturer,Teacher/Professor/Lecturer,Yes,Yes,Yes,6,1,Yes,Yes,5,4,Yes,4,6,4,1,No,Yes,0 - 1,Divorce
+107,Female,-10,No,Other,Engineer,No,No,Yes,6,1,No,Yes,1,3,No,7,0,10,3,No,Yes,0 - 1,Divorce
+108,Male,8,Yes,Business Owner,Business Owner,Yes,Yes,Yes,3,6,Yes,Yes,4,5,Yes,5,200,150,4,No,No,2 - 4,Divorce
+109,Male,-7,Yes,Other,Police,Yes,Yes,Yes,6,1,Yes,Yes,1,4,No,4,4.8,8,1,No,Yes,0 - 1,Divorce
+110,Male,3,Yes,Advocate/Lawyer,Advocate/Lawyer,Yes,Yes,Yes,2,4,Yes,Yes,5,6,No,8,12,10,3,Yes,No,6 - 10,Divorce
+111,Female,5,Yes,Actor,Actor,No,Yes,Yes,1,6,Yes,Yes,1,5,No,1,600,700,1,Yes,No,10+,Divorce
+112,Male,2,Yes,Business Owner,I don't want my spouse to work,Yes,Yes,No,6,1,Yes,No,5,2,Yes,6,25,0,4,No,No,0 - 1,Divorce
+113,Female,-1,Yes,Actor,Lawyer,Yes,Yes,Yes,2,3,Yes,Yes,4,3,No,4,20,25,3,Yes,No,6 - 10,Divorce
