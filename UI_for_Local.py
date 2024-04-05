@@ -75,7 +75,7 @@ def handle_form(gender):
     st.write("1 - I'm emotionally weak | 6 - I'm mentally strong")
     children = st.selectbox("While taking important decisions like having children, do you think your spouse's opinion is important?", ("Select", "Yes", "No"), key=f"{gender}_children")
     height = st.number_input("What is your height? (in inches)", value=None, step=1, key=f"{gender}_height", min_value=20, max_value=107)
-    income = st.number_input("What is your approximate income per annum? (in lakhs)", value=None, step=1, key=f"{gender}_income", min_value=0)
+    income = st.number_input("What is your approximate income per annum? (in lakhs)", value=0, step=1, key=f"{gender}_income")
     interaction_with_spouse_family = st.slider("How close are you with your spouse's family?", 1, 6, key=f"{gender}_interaction_with_spouse_family")
     st.write("1 - Low interaction | 6 - High interaction")
     pre_marital_relation = st.selectbox("Do you have any pre-marital relationships?", ("Select", "Yes", "No"), key=f"{gender}_pre_marital_relation")
@@ -126,283 +126,285 @@ handle_form("Female")
 submit_button = st.button("Submit")
 
 def handle_input_data():
-    male_persp = []
-    male_persp.append(1)
-    male_persp.append(male_responses[0]["age"]-female_responses[0]["age"])
-    if(male_responses[0]["graduation_status"] == "Yes"):
-        male_persp.append(1)
+    if(male_responses[0]["age"] == None or female_responses[0]["age"] == None or male_responses[0]["height"] == None or female_responses[0]["height"] == None):
+        return [], [] 
     else:
-        male_persp.append(0)
-    temp = male_responses[0]["occupation"]
-    if(temp == "Other" or temp == "None"):
-        male_persp.append(5)
-    elif(temp=="Actor"):
-        male_persp.append(0)
-    elif(temp == "Advocate/Lawyer"):
+        male_persp = []
         male_persp.append(1)
-    elif(temp == "Business Owner"):
-        male_persp.append(2)
-    elif(temp == "Doctor"):
-        male_persp.append(3)
-    elif(temp == "Engineer"):
-        male_persp.append(4)
-    elif(temp == "Police"):
-        male_persp.append(6)
-    elif(temp == "Teacher/Professor/Lecturer"):
-        male_persp.append(7)
+        male_persp.append(male_responses[0]["age"]-female_responses[0]["age"])
+        if(male_responses[0]["graduation_status"] == "Yes"):
+            male_persp.append(1)
+        else:
+            male_persp.append(0)
+        temp = male_responses[0]["occupation"]
+        if(temp == "Other" or temp == "None"):
+            male_persp.append(5)
+        elif(temp=="Actor"):
+            male_persp.append(0)
+        elif(temp == "Advocate/Lawyer"):
+            male_persp.append(1)
+        elif(temp == "Business Owner"):
+            male_persp.append(2)
+        elif(temp == "Doctor"):
+            male_persp.append(3)
+        elif(temp == "Engineer"):
+            male_persp.append(4)
+        elif(temp == "Police"):
+            male_persp.append(6)
+        elif(temp == "Teacher/Professor/Lecturer"):
+            male_persp.append(7)
 
-    temp = female_responses[0]["occupation"]
-    if(temp == "Other" or temp == "None"):
-        male_persp.append(7)
-    elif(temp=="Actor"):
-        male_persp.append(0)
-    elif(temp == "Advocate/Lawyer"):
-        male_persp.append(1)
-    elif(temp == "Business Owner"):
-        male_persp.append(2)
-    elif(temp == "Doctor"):
-        male_persp.append(3)
-    elif(temp == "Engineer"):
-        male_persp.append(4)
-    elif(temp == "Police"):
-        male_persp.append(8)
-    elif(temp == "Teacher/Professor/Lecturer"):
-        male_persp.append(9)
+        temp = female_responses[0]["occupation"]
+        if(temp == "Other" or temp == "None"):
+            male_persp.append(7)
+        elif(temp=="Actor"):
+            male_persp.append(0)
+        elif(temp == "Advocate/Lawyer"):
+            male_persp.append(1)
+        elif(temp == "Business Owner"):
+            male_persp.append(2)
+        elif(temp == "Doctor"):
+            male_persp.append(3)
+        elif(temp == "Engineer"):
+            male_persp.append(4)
+        elif(temp == "Police"):
+            male_persp.append(8)
+        elif(temp == "Teacher/Professor/Lecturer"):
+            male_persp.append(9)
 
-    temp = female_responses[0]["graduation_status"]
-    if(temp == "Yes"):
-        male_persp.append(1)
-    elif(temp == "No"):
-        male_persp.append(0)
+        temp = female_responses[0]["graduation_status"]
+        if(temp == "Yes"):
+            male_persp.append(1)
+        elif(temp == "No"):
+            male_persp.append(0)
 
-    temp = male_responses[0]["work_status"]
-    if(temp == "Yes"):
-        male_persp.append(1)
-    elif(temp == "No"):
-        male_persp.append(0)
-
-
-    temp = female_responses[0]["work_status"]
-    if(temp == "Yes"):
-        male_persp.append(1)
-    elif(temp == "No"):
-        male_persp.append(0)
-
-    temp = male_responses[0]["social_background"]
-    male_persp.append(temp)
-
-
-    temp = male_responses[0]["marriage_type"]
-    male_persp.append(temp)
+        temp = male_responses[0]["work_status"]
+        if(temp == "Yes"):
+            male_persp.append(1)
+        elif(temp == "No"):
+            male_persp.append(0)
 
 
-    temp = male_responses[0]["financial_status"]
-    if(temp == "Yes"):
-        male_persp.append(1)
-    elif(temp == "No"):
-        male_persp.append(0)
+        temp = female_responses[0]["work_status"]
+        if(temp == "Yes"):
+            male_persp.append(1)
+        elif(temp == "No"):
+            male_persp.append(0)
+
+        temp = male_responses[0]["social_background"]
+        male_persp.append(temp)
 
 
-    temp = female_responses[0]["financial_status"]
-    if(temp == "Yes"):
-        male_persp.append(1)
-    elif(temp == "No"):
-        male_persp.append(0)
+        temp = male_responses[0]["marriage_type"]
+        male_persp.append(temp)
 
 
-    temp = male_responses[0]["mental_status"]
-    male_persp.append(temp)
+        temp = male_responses[0]["financial_status"]
+        if(temp == "Yes"):
+            male_persp.append(1)
+        elif(temp == "No"):
+            male_persp.append(0)
 
 
-    temp = female_responses[0]["mental_status"]
-    male_persp.append(temp)
-
-    temp = male_responses[0]["children"]
-    if(temp == "Yes"):
-        male_persp.append(1)
-    elif(temp == "No"):
-        male_persp.append(0)
+        temp = female_responses[0]["financial_status"]
+        if(temp == "Yes"):
+            male_persp.append(1)
+        elif(temp == "No"):
+            male_persp.append(0)
 
 
-    temp = abs(male_responses[0]["height"]-female_responses[0]["height"])
-    male_persp.append(temp)
-
-    temp = male_responses[0]["income"]
-    male_persp.append(temp)
-
-    temp = female_responses[0]["income"]
-    male_persp.append(temp)
-
-    temp = male_responses[0]["interaction_with_spouse_family"]
-    male_persp.append(temp)
+        temp = male_responses[0]["mental_status"]
+        male_persp.append(temp)
 
 
-    temp = male_responses[0]["pre_marital_relation"]
-    if(temp == "Yes"):
-        male_persp.append(1)
-    elif(temp == "No"):
-        male_persp.append(0)
+        temp = female_responses[0]["mental_status"]
+        male_persp.append(temp)
 
-    temp = female_responses[0]["pre_marital_relation"]
-    if(temp == "Yes"):
-        male_persp.append(1)
-    elif(temp == "No"):
-        male_persp.append(0)
-
-    temp = male_responses[0]["time_before_marriage"]
-    if(temp == "0-1 "):
-        male_persp.append(0)
-    elif(temp == "10+"):
-        male_persp.append(2)
-    elif(temp == "2-4"):
-        male_persp.append(3)
-    elif(temp == "5-10"):
-        male_persp.append(4)
-    else:
-        male_persp.append(1)
+        temp = male_responses[0]["children"]
+        if(temp == "Yes"):
+            male_persp.append(1)
+        elif(temp == "No"):
+            male_persp.append(0)
 
 
+        temp = abs(male_responses[0]["height"]-female_responses[0]["height"])
+        male_persp.append(temp)
 
-    # Considering female perspective
-    female_persp = [0]
-    female_persp.append(female_responses[0]["age"]-male_responses[0]["age"])
-    if(female_responses[0]["graduation_status"] == "Yes"):
-        female_persp.append(1)
-    else:
-        female_persp.append(0)
-    temp = female_responses[0]["occupation"]
-    if(temp == "Other" or temp == "None"):
-        female_persp.append(5)
-    elif(temp=="Actor"):
-        female_persp.append(0)
-    elif(temp == "Advocate/Lawyer"):
-        female_persp.append(1)
-    elif(temp == "Business Owner"):
-        female_persp.append(2)
-    elif(temp == "Doctor"):
-        female_persp.append(3)
-    elif(temp == "Engineer"):
-        female_persp.append(4)
-    elif(temp == "Police"):
-        female_persp.append(6)
-    elif(temp == "Teacher/Professor/Lecturer"):
-        female_persp.append(7)
+        temp = male_responses[0]["income"]
+        male_persp.append(temp)
 
-    temp = male_responses[0]["occupation"]
-    if(temp == "Other" or temp == "None"):
-        female_persp.append(7)
-    elif(temp=="Actor"):
-        female_persp.append(0)
-    elif(temp == "Advocate/Lawyer"):
-        female_persp.append(1)
-    elif(temp == "Business Owner"):
-        female_persp.append(2)
-    elif(temp == "Doctor"):
-        female_persp.append(3)
-    elif(temp == "Engineer"):
-        female_persp.append(4)
-    elif(temp == "Police"):
-        female_persp.append(8)
-    elif(temp == "Teacher/Professor/Lecturer"):
-        female_persp.append(9)
+        temp = female_responses[0]["income"]
+        male_persp.append(temp)
 
-    temp = male_responses[0]["graduation_status"]
-    if(temp == "Yes"):
-        female_persp.append(1)
-    elif(temp == "No"):
-        female_persp.append(0)
-
-    temp = female_responses[0]["work_status"]
-    if(temp == "Yes"):
-        female_persp.append(1)
-    elif(temp == "No"):
-        female_persp.append(0)
+        temp = male_responses[0]["interaction_with_spouse_family"]
+        male_persp.append(temp)
 
 
-    temp = male_responses[0]["work_status"]
-    if(temp == "Yes"):
-        female_persp.append(1)
-    elif(temp == "No"):
-        female_persp.append(0)
+        temp = male_responses[0]["pre_marital_relation"]
+        if(temp == "Yes"):
+            male_persp.append(1)
+        elif(temp == "No"):
+            male_persp.append(0)
 
-    temp = female_responses[0]["social_background"]
-    female_persp.append(temp)
+        temp = female_responses[0]["pre_marital_relation"]
+        if(temp == "Yes"):
+            male_persp.append(1)
+        elif(temp == "No"):
+            male_persp.append(0)
 
-
-    temp = female_responses[0]["marriage_type"]
-    female_persp.append(temp)
-
-
-    temp = female_responses[0]["financial_status"]
-    if(temp == "Yes"):
-        female_persp.append(1)
-    elif(temp == "No"):
-        female_persp.append(0)
-
-
-    temp = male_responses[0]["financial_status"]
-    if(temp == "Yes"):
-        female_persp.append(1)
-    elif(temp == "No"):
-        female_persp.append(0)
+        temp = male_responses[0]["time_before_marriage"]
+        if(temp == "0-1 "):
+            male_persp.append(0)
+        elif(temp == "10+"):
+            male_persp.append(2)
+        elif(temp == "2-4"):
+            male_persp.append(3)
+        elif(temp == "5-10"):
+            male_persp.append(4)
+        else:
+            male_persp.append(1)
 
 
-    temp = female_responses[0]["mental_status"]
-    female_persp.append(temp)
+
+        # Considering female perspective
+        female_persp = [0]
+        female_persp.append(female_responses[0]["age"]-male_responses[0]["age"])
+        if(female_responses[0]["graduation_status"] == "Yes"):
+            female_persp.append(1)
+        else:
+            female_persp.append(0)
+        temp = female_responses[0]["occupation"]
+        if(temp == "Other" or temp == "None"):
+            female_persp.append(5)
+        elif(temp=="Actor"):
+            female_persp.append(0)
+        elif(temp == "Advocate/Lawyer"):
+            female_persp.append(1)
+        elif(temp == "Business Owner"):
+            female_persp.append(2)
+        elif(temp == "Doctor"):
+            female_persp.append(3)
+        elif(temp == "Engineer"):
+            female_persp.append(4)
+        elif(temp == "Police"):
+            female_persp.append(6)
+        elif(temp == "Teacher/Professor/Lecturer"):
+            female_persp.append(7)
+
+        temp = male_responses[0]["occupation"]
+        if(temp == "Other" or temp == "None"):
+            female_persp.append(7)
+        elif(temp=="Actor"):
+            female_persp.append(0)
+        elif(temp == "Advocate/Lawyer"):
+            female_persp.append(1)
+        elif(temp == "Business Owner"):
+            female_persp.append(2)
+        elif(temp == "Doctor"):
+            female_persp.append(3)
+        elif(temp == "Engineer"):
+            female_persp.append(4)
+        elif(temp == "Police"):
+            female_persp.append(8)
+        elif(temp == "Teacher/Professor/Lecturer"):
+            female_persp.append(9)
+
+        temp = male_responses[0]["graduation_status"]
+        if(temp == "Yes"):
+            female_persp.append(1)
+        elif(temp == "No"):
+            female_persp.append(0)
+
+        temp = female_responses[0]["work_status"]
+        if(temp == "Yes"):
+            female_persp.append(1)
+        elif(temp == "No"):
+            female_persp.append(0)
 
 
-    temp = male_responses[0]["mental_status"]
-    female_persp.append(temp)
+        temp = male_responses[0]["work_status"]
+        if(temp == "Yes"):
+            female_persp.append(1)
+        elif(temp == "No"):
+            female_persp.append(0)
 
-    temp = female_responses[0]["children"]
-    if(temp == "Yes"):
-        female_persp.append(1)
-    elif(temp == "No"):
-        female_persp.append(0)
-
-
-    temp = abs(female_responses[0]["height"]-male_responses[0]["height"])
-    female_persp.append(temp)
-
-    temp = female_responses[0]["income"]
-    female_persp.append(temp)
-
-    temp = male_responses[0]["income"]
-    female_persp.append(temp)
-
-    temp = female_responses[0]["interaction_with_spouse_family"]
-    female_persp.append(temp)
+        temp = female_responses[0]["social_background"]
+        female_persp.append(temp)
 
 
-    temp = female_responses[0]["pre_marital_relation"]
-    if(temp == "Yes"):
-        female_persp.append(1)
-    elif(temp == "No"):
-        female_persp.append(0)
+        temp = female_responses[0]["marriage_type"]
+        female_persp.append(temp)
 
-    temp = male_responses[0]["pre_marital_relation"]
-    if(temp == "Yes"):
-        female_persp.append(1)
-    elif(temp == "No"):
-        female_persp.append(0)
 
-    temp = female_responses[0]["time_before_marriage"]
-    if(temp == "0-1 "):
-        female_persp.append(0)
-    elif(temp == "10+"):
-        female_persp.append(2)
-    elif(temp == "2-4"):
-        female_persp.append(3)
-    elif(temp == "5-10"):
-        female_persp.append(4)
-    elif(temp == "Select"):
-        pass
-    else:
-        female_persp.append(1)
+        temp = female_responses[0]["financial_status"]
+        if(temp == "Yes"):
+            female_persp.append(1)
+        elif(temp == "No"):
+            female_persp.append(0)
 
-    # print("Inside function", len(male_persp), " ", len(female_persp))
-    return male_persp, female_persp
 
+        temp = male_responses[0]["financial_status"]
+        if(temp == "Yes"):
+            female_persp.append(1)
+        elif(temp == "No"):
+            female_persp.append(0)
+
+
+        temp = female_responses[0]["mental_status"]
+        female_persp.append(temp)
+
+
+        temp = male_responses[0]["mental_status"]
+        female_persp.append(temp)
+
+        temp = female_responses[0]["children"]
+        if(temp == "Yes"):
+            female_persp.append(1)
+        elif(temp == "No"):
+            female_persp.append(0)
+
+
+        temp = abs(female_responses[0]["height"]-male_responses[0]["height"])
+        female_persp.append(temp)
+
+        temp = female_responses[0]["income"]
+        female_persp.append(temp)
+
+        temp = male_responses[0]["income"]
+        female_persp.append(temp)
+
+        temp = female_responses[0]["interaction_with_spouse_family"]
+        female_persp.append(temp)
+
+
+        temp = female_responses[0]["pre_marital_relation"]
+        if(temp == "Yes"):
+            female_persp.append(1)
+        elif(temp == "No"):
+            female_persp.append(0)
+
+        temp = male_responses[0]["pre_marital_relation"]
+        if(temp == "Yes"):
+            female_persp.append(1)
+        elif(temp == "No"):
+            female_persp.append(0)
+
+        temp = female_responses[0]["time_before_marriage"]
+        if(temp == "0-1 "):
+            female_persp.append(0)
+        elif(temp == "10+"):
+            female_persp.append(2)
+        elif(temp == "2-4"):
+            female_persp.append(3)
+        elif(temp == "5-10"):
+            female_persp.append(4)
+        elif(temp == "Select"):
+            pass
+        else:
+            female_persp.append(1)
+
+        # print("Inside function", len(male_persp), " ", len(female_persp))
+        return male_persp, female_persp
 
 if submit_button:
     male_persp, female_persp = handle_input_data()
