@@ -47,10 +47,7 @@ body {
 # Displaying the title with added CSS class for color, center alignment, and background color
 st.markdown('<h1 class="title">Unravelling Marital Destinies</h1>', unsafe_allow_html=True)
 
-st.write('''
-Welcome, dear visitors, to a journey of self-discovery and mutual understanding. Your presence here reflects your commitment to exploring companionship and shared destiny. Together, let's delve into marital harmony and societal cohesion. Embrace the diversity of experiences that shape our understanding of love and partnership. Each interaction contributes to our collective wisdom. Through introspection, we aim to illuminate the path towards enduring connections. Our journey is about acknowledging vulnerabilities and celebrating strengths. Together, we stand on the threshold of exploring the mysteries of love and commitment.
-          Let's embark on this odyssey with courage and curiosity, embracing the challenges and triumphs ahead. With each step, we unravel the intricate tapestry of marital destinies.
-''')
+st.write('''Relationships are complicated—let’s see if yours is built to last or heading for trouble.''')
 
 st.markdown('<h4>We request you and your partner to take a moment to fill the form and gain deeper insights into your relationship.</h4>', unsafe_allow_html=True)
 
