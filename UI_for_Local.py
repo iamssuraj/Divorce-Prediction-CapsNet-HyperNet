@@ -54,8 +54,12 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-
-st.markdown('<h4>Take a moment with your partner to fill out the form and gain deeper insights into your relationship.</h4>', unsafe_allow_html=True)
+st.markdown(
+    "<p style='text-align: center; font-size:16px; margin-top:20px;'>"
+    "Take a moment with your partner to fill out the form and gain deeper insights into your relationship."
+    "</p>", 
+    unsafe_allow_html=True
+)
 
 
 male_responses = []
