@@ -19,7 +19,7 @@ class CapsuleLayer(layers.Layer):
 
     def build(self, input_shape):
         input_dim = input_shape[-1]
-        self.kernel = self.add_weight('kernel', (input_dim, self.num_capsules * self.capsule_dim),
+        self.kernel = self.add_weight(name='kernel', shape=(input_dim, self.num_capsules * self.capsule_dim),
                                       initializer=self.kernel_initializer, trainable=True)
         super(CapsuleLayer, self).build(input_shape)
 
@@ -61,8 +61,8 @@ capsule_model = build_capsule_model(input_shape, num_classes)
 combined_model = keras.Sequential([hypernetwork, capsule_model])
 
 custom_objects = {'CapsuleLayer': CapsuleLayer}
-combined_model = load_model('my_model.h5', custom_objects=custom_objects)
-combined_model.save("my_model.h5")
+combined_model = load_model('Divorce-Prediction-CapsNet-HyperNet/my_model.h5', custom_objects=custom_objects)
+combined_model.save("Divorce-Prediction-CapsNet-HyperNet/my_model.h5")
 
 weights = combined_model.get_weights()
 # print(weights)
