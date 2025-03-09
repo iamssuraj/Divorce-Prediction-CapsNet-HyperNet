@@ -7,6 +7,9 @@ from imblearn.over_sampling  import SMOTE
 from tensorflow.keras import layers
 from tensorflow.keras.models import load_model
 from tensorflow.keras import layers, models, regularizers
+import os
+print("📂 Current Directory:", os.getcwd())
+print("📁 Files in Directory:", os.listdir(os.getcwd()))
 
 # Define your capsule layer
 class CapsuleLayer(layers.Layer):
