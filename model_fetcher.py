@@ -39,6 +39,7 @@ class CapsuleLayer(layers.Layer):
     def compute_output_shape(self, input_shape):
         return tuple([None, self.num_capsules, self.capsule_dim])
 
+
 # Build the Hypernetwork model
 def build_hypernetwork(input_shape, num_classes):
     x = layers.Input(shape=input_shape)
@@ -61,14 +62,6 @@ hypernetwork = build_hypernetwork(input_shape, num_classes)
 capsule_model = build_capsule_model(input_shape, num_classes)
 
 combined_model = keras.Sequential([hypernetwork, capsule_model])
-
-custom_objects = {'CapsuleLayer': CapsuleLayer}
-combined_model = load_model('Divorce-Prediction-CapsNet-HyperNet/my_model.h5', custom_objects=custom_objects)
-combined_model.save("Divorce-Prediction-CapsNet-HyperNet/my_model.h5")
-
-weights = combined_model.get_weights()
-# print(weights)
-
 # Detect correct directory
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, "my_model.h5")
@@ -80,3 +73,10 @@ if not os.path.exists(MODEL_PATH):
 else:
     st.write(f"📂 Loading model from: `{MODEL_PATH}`")
     model = load_model(MODEL_PATH, custom_objects={'CapsuleLayer': CapsuleLayer}, compile=True)
+
+custom_objects = {'CapsuleLayer': CapsuleLayer}
+combined_model = load_model('Divorce-Prediction-CapsNet-HyperNet/my_model.h5', custom_objects=custom_objects)
+combined_model.save("Divorce-Prediction-CapsNet-HyperNet/my_model.h5")
+
+weights = combined_model.get_weights()
+# print(weights)
