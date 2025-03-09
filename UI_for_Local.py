@@ -47,8 +47,7 @@ body {
 # Displaying the title with added CSS class for color, center alignment, and background color
 st.markdown('<h1 class="title">Unravelling Marital Destinies</h1>', unsafe_allow_html=True)
 
-st.write('''Relationships are complicated—let’s see if yours is built to last or heading for trouble.''')
-
+st.markdown("<p style='text-align: center; font-size:16px;'>Relationships are complicated—let’s see if yours is built to last or heading for trouble.</p>", unsafe_allow_html=True)
 st.markdown('<h4>We request you and your partner to take a moment to fill the form and gain deeper insights into your relationship.</h4>', unsafe_allow_html=True)
 
 
