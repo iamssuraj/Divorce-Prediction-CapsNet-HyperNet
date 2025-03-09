@@ -4,6 +4,7 @@ from tensorflow.keras.models import load_model
 from model_fetcher import CapsuleLayer
 from tensorflow.keras import layers
 import csv
+st.set_page_config(page_title="Divorce Prediction App", page_icon="💔")
 st.markdown("""
 <style>
 body {
