@@ -9,20 +9,6 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras import layers, models, regularizers
 import os
 import streamlit as st
-from tensorflow.keras.models import load_model
-
-# Detect correct directory
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, "my_model.h5")
-
-# Check if model exists before loading
-if not os.path.exists(MODEL_PATH):
-    st.error(f"❌ Model file not found at `{MODEL_PATH}`. Please check deployment.")
-    st.stop()  # Stops execution, preventing crashes
-else:
-    st.write(f"📂 Loading model from: `{MODEL_PATH}`")
-    model = load_model(MODEL_PATH, custom_objects={'CapsuleLayer': CapsuleLayer}, compile=True)
-
 
 # Define your capsule layer
 class CapsuleLayer(layers.Layer):
@@ -82,3 +68,15 @@ combined_model.save("Divorce-Prediction-CapsNet-HyperNet/my_model.h5")
 
 weights = combined_model.get_weights()
 # print(weights)
+
+# Detect correct directory
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "my_model.h5")
+
+# Check if model exists before loading
+if not os.path.exists(MODEL_PATH):
+    st.error(f"❌ Model file not found at `{MODEL_PATH}`. Please check deployment.")
+    st.stop()  # Stops execution, preventing crashes
+else:
+    st.write(f"📂 Loading model from: `{MODEL_PATH}`")
+    model = load_model(MODEL_PATH, custom_objects={'CapsuleLayer': CapsuleLayer}, compile=True)
