@@ -8,14 +8,14 @@ st.set_page_config(page_title="Divorce Analysis", page_icon="💔")
 st.markdown("""
 <style>
 body {
-    border: 1px solid #CCCCCC; /* Light Gray */
+    border: 1px solid #CCCCCC; 
     border-radius: 10px;
     padding: 20px;
 }
 .title {
     color: white;
     text-align: center;
-    background-color: #4CBB17; /* Light Blue */
+    background-color: #4CBB17;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 25px;
@@ -24,7 +24,7 @@ body {
 .male_title{
     color: black;
     text-align: center;
-    background-color: #ADD8E6; /* Light Blue */
+    background-color: #ADD8E6; 
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 25px;
@@ -32,7 +32,7 @@ body {
 .female_title{
     color: black;
     text-align: center;
-    background-color: #FF69B4; /* Light Blue */
+    background-color: #FF69B4; 
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 25px;
